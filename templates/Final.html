@@ -1,0 +1,30 @@
+
+
+     
+     <div class="form-horizontal well col-lg-offset-3 col-lg-6">
+      <div class="table-responsive">
+     		<table class="table table-bordered table-hover final-form" ng-repeat="key in notSorted(data)" ng-init="value = data[key]">
+     		 <thead>
+     			<tr>
+      				<th colspan="{{count}}">{{key}}</th>
+      			</tr>
+      		 </thead>
+      		 <tbody ng-switch="key">
+      		 	<tr ng-switch-when="qualification">
+     				<td id="{{key}}" ng-repeat="val in value track by $index">{{val}}</td>
+     			</tr>
+     			<tr ng-switch-when="marks">
+     				<td id="{{key}}" ng-repeat="val in value track by $index">{{val}}</td>
+     			</tr>
+     			<tr ng-switch-default>
+     				<td id="{{key}}">{{value}}</td>
+     			</tr>
+     		 </tbody>
+     		</table>
+       </div>
+	 </div>
+     <ul class="pager col-lg-offset-2 col-lg-10">
+    	<li><a href="javascript:void(0);" class="btn btn-default col-lg-offset-3 previous" ng-disabled="previous">Previous</a></li>
+    	<li><a href="javascript:void(0);" class="btn btn-default next" ng-disabled="next">Next</a></li>
+    	<li><a href="javascript:void(0);" ng-click="formDelete($event)" class="btn btn-default">Logout</a></li>
+  	 </ul>

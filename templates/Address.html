@@ -1,0 +1,87 @@
+
+     
+     <form ng-submit="submit()" name="myForm" class="form-horizontal well col-lg-offset-3 col-lg-6" role="form">
+     <h3 class="col-lg-offset-3 col-lg-10">Present Address</h3>
+     <div class="form-group">
+     	<label for="houseNo" class="control-label col-sm-2">House Number:</label>
+     	<div class="col-lg-10">
+     		<input name="myHouseNo" type="text" id="houseNo" ng-model="user.houseNo" ng-required="true" class="form-control"/>
+     	</div>
+      </div>
+      <div class="form-group">
+     	<label for="streetName" class="control-label col-sm-2">Street Name:</label>
+     	<div class="col-lg-10">
+     		<input name="myStreetName" type="text" id="streetName" ng-model="user.streetName" ng-required="true" class="form-control"/>
+     	</div>
+      </div>
+      <div class="form-group">
+     	<label for="locality" class="control-label col-sm-2">Locality:</label>
+     	<div class="col-lg-10">
+     		<input name="myLocality" type="text" id="locality" ng-model="user.locality" ng-required="true" class="form-control"/>
+     	</div>
+      </div>
+      <div class="form-group">
+     	<label for="state" class="control-label col-sm-2">State:</label>
+     	<div class="col-lg-10">
+     		<input name="myState" type="text" id="state" ng-model="user.state" class="form-control"/>
+     	</div>
+      </div>
+      <div class="form-group">
+     	<label for="zipCode" class="control-label col-sm-2">Zip Code:</label>
+     	<div class="col-lg-10">
+     		<input name="myZipCode" type="text" id="zipCode" ng-model="user.zipCode" class="form-control"/>
+     	</div>
+      </div>
+  	  
+     <h3 class="col-lg-offset-3 col-lg-10">Permanent Address</h3>
+     
+     <div class="form-group">
+     	<div class="checkbox checkbox-primary">
+     		<input type="checkbox" id="checkPresent" ng-model="check" ng-change="change()"/>
+     	</div>
+     	<label for="checkPresent">Same as Present Address</label>
+     </div>
+     <div class="form-group">
+     	<label for="houseNo" class="control-label col-sm-2">House Number:</label>
+     	<div class="col-lg-10">
+     		<input name="myHouseNo" type="text" id="houseNo" ng-model="user.perhouseNo" ng-required="true" class="form-control"/>
+     	</div>
+      </div>
+      <div class="form-group">
+     	<label for="streetName" class="control-label col-sm-2">Street Name:</label>
+     	<div class="col-lg-10">
+     		<input name="myStreetName" type="text" id="streetName" ng-model="user.perstreetName" ng-required="true" class="form-control"/>
+     	</div>
+      </div>
+      <div class="form-group">
+     	<label for="locality" class="control-label col-sm-2">Locality:</label>
+     	<div class="col-lg-10">
+     		<input name="myLocality" type="text" id="locality" ng-model="user.perlocality" ng-required="true" class="form-control"/>
+     	</div>
+      </div>
+      <div class="form-group">
+     	<label for="state" class="control-label col-sm-2">State:</label>
+     	<div class="col-lg-10">
+     		<input name="myState" type="text" id="state" ng-model="user.perstate" class="form-control"/>
+     	</div>
+      </div>
+      <div class="form-group">
+     	<label for="zipCode" class="control-label col-sm-2">Zip Code:</label>
+     	<div class="col-lg-10">
+     		<input name="myZipCode" type="text" id="zipCode" ng-model="user.perzipCode" class="form-control"/>
+     	</div>
+      </div>
+  	  <div class="form-group"> 
+    	<div class="col-lg-offset-2 col-lg-10">
+     		<button id="submit_personal_details" ng-click="submit($event)" ng-disabled="myForm.$invalid" class="btn btn-block">Submit</button>
+     	</div>
+      </div>
+      
+     </form></br>
+      <ul class="pager col-lg-offset-2 col-lg-10">
+    	<li><a href="javascript:void(0);"  class="btn btn-default col-lg-offset-3 previous" ng-disabled="previous">Previous</a></li>
+    	<li><a href="javascript:void(0);"  class="btn btn-default next" ng-disabled="next">Next</a></li>
+    	<li><a href="javascript:void(0);" ng-click="formDelete($event)" class="btn btn-default">Logout</a></li>
+  	  </ul>
+   
+ 

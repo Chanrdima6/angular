@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src = "http://ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular.min.js"></script>
+	<script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular-route.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular-resource.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	<script src="app.module.js"></script>
+	<script src="controllers/controller.js"></script>
+	<script src="configs/routeProvider.js"></script>
+	<script src="services/idService.js"></script>
+	<script src="services/UserService.js"></script>
+	<script src="services/myService.js"></script>
+	<script src="services/ButtonService.js"></script>
+	
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/genericStyles.css">
+</head>
+
+<body>
+
+<div ng-app="myApp" ng-controller="myCtrl"> 
+ <div ng-show="!enable" class="well col-lg-offset-3 col-lg-6 vertical-center">
+ 	<h1> Login Form</h1>
+ 	<form name="LoginForm" class="form-horizontal" role="form">
+    	<div class="alert alert-danger" ng-show="valid" role="alert">
+  					<span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+					<span class="sr-only">Error:</span>
+  					Wrong username or Password
+		</div>
+ 		<div class="form-group">
+		  <label for="email" class="control-label col-lg-2 text-fluid">Username:</label>
+		  <div class="col-lg-6">
+		  	<input type="email" id="email" name="username" ng-model="user.username" value="" class="form-control" placeholder="Username" ng-keydown="removeAlert()"/>
+		  	<span ng-show="LoginForm.username.$invalid">Please give a valid email id</span>
+		  </div>
+		</div>
+		 
+		<div class="form-group">
+		 <label for="password" class="control-label col-lg-2 text-fluid">Password:</label>
+		 <div class="col-lg-6">
+		    <input type="password" id="password" name="password" ng-model="user.password" value="" class="form-control" placeholder="Password" ng-keydown="removeAlert()"/>
+		 </div>
+		 </div>
+		 <div class="form-group">
+		 	<div class="col-lg-offset-2 col-lg-6">
+		 		<a href="#" ng-click="formSubmit()" class="btn btn-default text-fluid">Login</a>
+		 	</div>
+		 </div>
+	</form>
+ </div>
+ 
+  
+ <nav class="navbar navbar-default" ng-show="enable">
+  <div class="container-fluid">
+ 	<div class="navbar-header">
+ 	  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="javascript:void(0);">Details Form</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+ 		<ul  class="nav navbar-nav">
+    		<li id="Personal"><a href = "#Personal">Personal Details</a></li>
+    		<li id="Address"><a href = "#Address">Address Details</a></li>
+ 			<li id="Educational"><a href = "#Educational">Educational Details</a></li>
+	 		<li id="Final"><a href = "#Final">Final Form</a></li>
+ 		</ul>
+ 	</div>
+ 	</div>
+ </nav>
+ <div ng-show="enable" class="notes well text-fluid"></div>
+ <div ng-view ng-show="enable" class="container"></div>
+
+<footer class="footer" ng-show="enable">
+    <div class="container-fluid">
+        <p class="text-muted">
+        	Login Form
+        </p>
+        <p class="text-muted">
+        	@2016
+        </p>
+    </div>
+</footer>
+</div>
+
+
+</body>
+</html>

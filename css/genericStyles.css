@@ -1,0 +1,122 @@
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  font-family: "Open Sans", sans-serif;
+  min-height: 100%;
+  margin-bottom: 60px;
+}
+label {
+	font-weight: 400;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  background-color: #f5f5f5;
+}
+.container .form-horizontal .control-label {
+	text-align: left;
+}
+body > .container {
+  padding: 60px 15px 0;
+}
+div.vertical-center {
+	margin-top: 17%;
+}
+.disable-link {
+	pointer-events: none;
+	opacity: 0.4;
+}
+.gender {
+	margin-top: 7px;
+	margin-left:13px
+}
+.final-form tr {
+	border-bottom: 1px solid #ddd;
+}
+.footer .text-muted {
+	margin: 20px;
+	display: inline-block;
+}
+.container .pager {
+	margin: 10% 0;
+}
+.input-group[class*=col-] {
+   padding-right: 15px;
+   padding-left: 15px;
+}
+.checkbox-primary{
+	margin-left:40%;
+	display:inline;
+}
+.notes {
+	margin-left:35%;
+	margin-top: 30%;
+	width:35%;
+	text-align:center;
+}
+@media (min-width: 764px) and (orientation: landscape) {
+.nav li a {
+	color: white;
+	text-decoration: none; 
+	padding: 10px 0 20px 38px;
+	background: #e7e7e7; 
+	position: relative; 
+	display: block;
+	float: left;
+}
+.nav li a:after { 
+	content: " "; 
+	display: block; 
+	width: 0; 
+	height: 0;
+	border-top: 25px solid transparent;           
+	border-bottom: 25px solid transparent;
+	border-left: 30px solid #e7e7e7;
+	position: absolute;
+	top: 50%;
+	margin-top: -25px; 
+	left: 100%;
+	z-index: 2; 
+}	
+.nav li a:before { 
+	content: " "; 
+	display: block; 
+	width: 0; 
+	height: 0;
+	border-top: 25px solid transparent;       
+	border-bottom: 25px solid transparent;
+	border-left: 30px solid white;
+	position: absolute;
+	top: 100%;
+	margin-top: -50px; 
+	margin-left: 2px;
+	left: 100%;
+	z-index: 1; 
+}	
+.nav li a:hover {
+	background: white; 
+}
+.nav li a:hover:before { 
+	background: transparent; 
+}
+.nav li:not(.active) a:hover:after { 
+	background: transparent;
+	border-top: 25px solid transparent;           
+	border-bottom: 25px solid transparent;
+	border-left: 30px solid white;
+}
+.navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover {
+	background-color: white;
+}
+}	
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
+	color: rgb(84, 27, 24);
+}
+
+
+

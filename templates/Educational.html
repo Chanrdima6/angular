@@ -1,0 +1,59 @@
+
+
+    
+    <form ng-submit="submit()" name="myForm" class="form-horizontal well col-lg-offset-3 col-lg-6" role="form">
+     <div class="form-group">
+     	<label for="id" class="control-label col-lg-2">Student Id:</label>
+     	<div class="col-lg-10">
+     		<input name="id" type="text" id="id" ng-model="studentId" ng-disabled="true" class="form-control"/>
+     	</div>
+   	 </div>
+   	 <div class="form-group">
+     	<label for="qual" class="control-label col-sm-2">Qualification:</label>
+     	<div class="col-lg-10">
+     		<input type="text" id="qual" ng-model="qualification" value="" ng-required="true" class="form-control"/>
+     	</div>
+     </div>
+     <div class="form-group">
+     	<label for="marks" class="control-label col-sm-2">Marks:</label>
+     	<div class="col-lg-10">
+     		<input id="marks" ng-model="marks" value="" ng-required="true" class="form-control"/>
+     	</div>
+     </div>
+     <div class="form-group"> 
+    	<div class="col-lg-offset-2 col-lg-10">
+     		<button ng-click="addRows()" ng-disabled="myForm.$invalid" class="btn btn-default">Add Qualifications</button>
+     	</div>
+     </div>
+     
+  	 <div class="form-group"> 
+    	<div class="col-lg-offset-2 col-lg-10">	
+     		<button id="submit_edu_details" ng-click="submit($event)" ng-disabled="counter<1" class="btn btn-block">Submit</button>
+     	</div>
+     </div>
+     </form></br>
+     <h3 class="col-lg-offset-3 col-lg-6">Summary</h3>
+     <div class="well col-lg-offset-3 col-lg-6">
+      <div class="table-responsive">
+     	<table class="table table-bordered table-hover">
+     		<thead>
+     			<tr>
+	     			<th>Qualification</th>
+     				<th>Marks</th>
+     			</tr>
+     		</thead>
+     		<tbody>
+     			<tr ng-repeat="std in student">
+	 				<td>{{std.qualification}}</td>
+	 				<td>{{std.marks}}</td>
+				</tr>
+			</tbody>
+  	 	</table>
+  	 	</div>
+  	 </div>
+     <ul class="pager col-lg-offset-2 col-lg-10">
+    	<li><a href="javascript:void(0);" class="btn btn-default col-lg-offset-3 previous" ng-disabled="previous">Previous</a></li>
+    	<li><a href="javascript:void(0);" class="btn btn-default next" ng-disabled="next">Next</a></li>
+    	<li><a href="javascript:void(0);" ng-click="formDelete($event)" class="btn btn-default">Logout</a></li>
+  	  </ul>
+

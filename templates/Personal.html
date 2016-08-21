@@ -1,0 +1,53 @@
+
+
+     
+     <form ng-submit="submit()" name="myForm" class="form-horizontal well col-lg-offset-3 col-lg-6" role="form">
+      <div class="form-group">
+     	<label for="firstname" class="control-label col-sm-2">FirstName:</label>
+     	<div class="col-lg-10">
+     		<input name="myFirstname" type="text" id="firstname" ng-model="user.firstname" ng-required="true" class="form-control"/>
+     	</div>
+      </div>
+      <div class="form-group">
+     	<label for="lastname" class="control-label col-sm-2">LastName:</label>
+     	<div class="col-lg-10">
+     		<input name="mylastname" type="text" id="lastname" ng-model="user.lastname" ng-required="true" class="form-control"/>
+     	</div>
+      </div>
+      <div class="form-group">
+     	<label for="email" class="control-label col-sm-2">Email:</label>
+     	<div class="col-lg-10">
+     		<input name="myEmail" type="email" id="email" ng-model="user.email" class="form-control"/>
+     		<span ng-show="myForm.myEmail.$invalid">Please give a valid email id</span>
+     	</div>
+      </div>
+      <div class="form-group">
+     	<label for="gender" class="control-label col-lg-2">Gender:</label>
+     	<label class="gender">
+     		<input type="radio" id="gender" name="gender" value="male" ng-model="user.gender" ng-required="true"> Male
+     	</label>
+     	<label class="gender">
+  			<input type="radio" id="gender" name="gender" value="female" ng-model="user.gender" ng-required="true"> Female
+  		</label>
+  	  </div>
+  	  <div class="form-group">
+     	<label for="phoneNumber" class="control-label col-lg-2">Phone Number:</label>
+     	<div class="col-lg-10 input-group">
+     		<span class="input-group-addon">+91</span>
+     		<input name="myphoneNumber" type="text" id="phoneNumber" ng-model="user.phoneNumber" ng-required="true" class="col-lg-5 form-control"/>
+     	</div>
+      </div>
+  	  <div class="form-group"> 
+    	<div class="col-lg-offset-2 col-lg-10">
+     		<button id="submit_personal_details" ng-click="submit($event)" ng-disabled="myForm.$invalid" class="btn btn-block">Submit</button>
+     	</div>
+      </div>
+      
+     </form></br>
+      <ul class="pager col-lg-offset-2 col-lg-10">
+    	<li><a href="javascript:void(0);"  class="btn btn-default col-lg-offset-3 previous" ng-disabled="previous">Previous</a></li>
+    	<li><a href="javascript:void(0);"  class="btn btn-default next" ng-disabled="next">Next</a></li>
+    	<li><a href="javascript:void(0);" ng-click="formDelete($event)" class="btn btn-default">Logout</a></li>
+  	  </ul>
+  
+ 

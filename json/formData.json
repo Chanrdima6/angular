@@ -1,0 +1,22 @@
+ {
+    "firstname": "",
+    "lastname": "",
+    "email": "",
+    "gender":"",
+    "phoneNumber":"",
+    "houseNo":"",
+    "streetName":"",
+    "locality":"",
+    "state":"",
+    "zipCode":"",
+    "perhouseNo":"",
+    "perstreetName":"",
+    "perlocality":"",
+    "perstate":"",
+    "perzipCode":"",
+    "studentId":"",
+    "qualification":[],
+    "marks":[]
+   
+    }
+    
